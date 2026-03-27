@@ -39,10 +39,15 @@ public class Driver {
             caps.setCapability("appPackage",ConfigReader.getProperty("kiwiAppPackage"));
             caps.setCapability("appActivity",ConfigReader.getProperty("kiwiAppActivity"));
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
+
             /* eger bu capability FALSE olarak kullanilirsa,uygulama test edildikten sonra her seferinde kullanici datalari temizlenir ve
             uygulamanin ilk install haline dondurulur
              */
             // eger true olursa kullanicili bilgileri test bittikten sonra sifirlanmaz ve tercihler kaydedilir.Islemlere kaldiginiz yerden devam edilir
+
+
+            // caps.setCapability("autoGrantPermissions",true);
+            // uygulama ilk acildiginda izin ver diye sordugunda kullanmamiz gereken cap. Eger true yaparsak, Appium bunu otomatik olarak onaylar
 
 
             if (ConfigReader.getProperty("platformName").equals("Android")) {
